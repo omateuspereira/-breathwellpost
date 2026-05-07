@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>(1) Clear Your Lungs</title>
+    <link rel="icon" type="image/x-icon" href="https://nextpathvitality.com/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background-color: #810505;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* top nav bar */
+    .header-nav {
+      background-color: #A60C0C;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      min-height: 58px;
+      width: 100%;
+    }
+    .header-nav .icon {
+      font-size: 28px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .header-nav .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    /* scrolling ticker */
+    .ticker-wrap {
+      overflow: hidden;
+      width: 100%;
+      background-color: #810505;
+      min-height: 28px;
+      display: flex;
+      align-items: center;
+    }
+    .ticker-loop {
+      display: inline-block;
+      white-space: nowrap;
+      animation: loop-anim 28s linear infinite;
+    }
+    .ticker-content {
+      display: inline-block;
+      font-family: 'CNN Sans Display', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #fff;
+      padding-left: 0.25em;
+      text-transform: uppercase;
+    }
+    @keyframes loop-anim {
+      0%   { margin-left: 0; }
+      100% { margin-left: -50%; }
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main-wrap {
+      max-width: 930px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* headline */
+    .headline-wrap {
+      margin: 0 auto;
+      max-width: 930px;
+      padding: 20px 15px 10px;
+    }
+    .titulo {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #000;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    /* content section */
+    .content-section {
+      max-width: 925px;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .byline {
+      font-family: 'Roboto', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      margin: 14px 0 0 0;
+    }
+    .byline p { margin: 0 0 4px; }
+    .byline .meta {
+      color: #888;
+      font-size: 14px;
+    }
+
+    .hero-img-wrap {
+      margin: 14px 0 0 0;
+    }
+    .hero-img-wrap a { display: block; }
+    .hero-img-wrap img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 16px;
+      border: none;
+      display: block;
+    }
+
+    .video-notice {
+      margin: 0 0 4px 0;
+      text-align: center;
+    }
+    .video-notice h2 {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 16px;
+      text-align: center;
+      color: #676868;
+      font-family: 'Roboto', sans-serif;
+      line-height: 16px;
+    }
+
+    /* CTA Button */
+    .btn-wrap {
+      text-align: center;
+      animation: pulsar 1.5s infinite;
+    }
+    .btn-wrap.second {
+      margin-top: 20px;
+    }
+    @keyframes pulsar {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.03); }
+      100% { transform: scale(1); }
+    }
+    .btn-wrap {
+      margin: 20px 0;
+    }
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background-color: #10893E;
+      color: #fff;
+      text-decoration: none;
+      font-family: Helvetica, sans-serif;
+      font-size: 38px;
+      font-weight: 500;
+      border-radius: 5px;
+      padding: 18px 15px;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .cta-btn:hover { background-color: #0d7234; }
+    .button-text {
+      font-size: 37px;
+      font-weight: bold;
+      margin: 0 0 8px 0;
+      display: block;
+    }
+    .subtext {
+      font-size: 22px;
+      font-weight: 500;
+      opacity: 0.78;
+      margin: 0;
+      display: block;
+    }
+
+    /* Body paragraphs */
+    .custom-paragraph {
+      margin-bottom: 16px;
+      color: #000;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 21px;
+    }
+
+    /* ── FOOTER ── */
+    .footer-wrap {
+      background-color: #F0F2F4;
+      margin-top: 50px;
+      padding: 30px 20px 20px;
+    }
+    .footer-disclaimer {
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #494949;
+      max-width: 930px;
+      margin: 0 auto 20px;
+    }
+    .footer-disclaimer p { margin: 0 0 8px; }
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      max-width: 930px;
+      margin: 0 auto;
+      justify-items: center;
+      align-items: center;
+    }
+    .footer-links a {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #202D3C;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer-links a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      /* Header */
+      .header-nav { padding: 12px 15px; min-height: 48px; }
+      .header-nav .title { font-size: 20px; }
+      .header-nav .icon { font-size: 22px; }
+      .ticker-content { font-size: 7px; }
+      .ticker-loop { animation-duration: 24s; }
+
+      /* Headline */
+      .headline-wrap { padding: 14px 12px 8px; }
+      .titulo { font-size: 21px; }
+
+      /* Content section */
+      .content-section { padding: 0 12px; }
+
+      /* Byline */
+      .byline { font-size: 12px; margin-top: 10px; }
+      .byline p { margin: 0 0 2px; }
+      .byline .meta { font-size: 11px; }
+
+      /* Hero image — positive margin, no overlap */
+      .hero-img-wrap { margin: 10px 0 0 0; }
+      .hero-img-wrap img { border-radius: 10px; height: auto; }
+
+      /* Video notice */
+      .video-notice { margin: 8px 0 6px; }
+      .video-notice h2 {
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 0 4px;
+      }
+
+      /* CTA button */
+      .btn-wrap { margin: 16px 0; }
+      .btn-wrap.second { margin-top: 16px; }
+      .cta-btn {
+        font-size: 20px;
+        padding: 14px 12px;
+        border-radius: 5px;
+      }
+      .button-text {
+        font-size: 18px;
+        margin: 0 0 6px;
+      }
+      .subtext {
+        font-size: 13px;
+        margin: 0;
+      }
+
+      /* Body copy */
+      .custom-paragraph { font-size: 16px; margin-bottom: 12px; }
+
+      /* Footer */
+      .footer-links { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    }
+
+    @media (max-width: 480px) {
+      .titulo { font-size: 19px; }
+      .button-text { font-size: 16px; }
+      .subtext { font-size: 12px; }
+      .footer-links { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <!-- Top nav -->
+    <div class="header-nav">
+      <i class="fas fa-search icon"></i>
+      <div class="title">HEALTH</div>
+      <i class="fas fa-bars icon"></i>
+    </div>
+
+    <!-- Scrolling ticker -->
+    <div class="ticker-wrap">
+      <div class="ticker-loop" id="tickerLoop">
+        <span class="ticker-content" id="tickerContent">
+          Daily updates on wellness and health - Daily updates on wellness and health -
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══ HEADLINE ══ -->
+  <div class="headline-wrap">
+    <h1 class="titulo">
+      <span style="color:#850505; font-weight:bold;">Top US Respiratory Therapist:</span>
+      &#8220;Do This Simple 7s Ritual Daily To Clear Trapped Mucus & 
+      <u>Start Breathing Freely Again!&#8220;</u>
+    </h1>
+  </div>
+
+  <!-- ══ MAIN CONTENT ══ -->
+  <div class="content-section">
+
+    <!-- Byline -->
+    <div class="byline">
+      <p><strong style="color:black;">By Ben Locker</strong></p>
+      <p class="meta">Updated 30 minutes ago &#8211; Plays: 103,680</p>
+    </div>
+
+    <!-- Hero image -->
+    <div class="hero-img-wrap">
+      <a id="cta" href="https://breathwellpost.site/breathe-easy-again/">
+        <img
+          src="https://nextpathvitality.com/wp-content/uploads/2025/12/c1b833b2-233a-11f0-a585-06d664cfaed9_f032f95db7fce567dd1ffec18937834dab05d1c3_ChatGPT-Image-Jun-6-2025-05_58_51-PM.avif"
+          srcset="https://nextpathvitality.com/wp-content/uploads/2025/12/c1b833b2-233a-11f0-a585-06d664cfaed9_f032f95db7fce567dd1ffec18937834dab05d1c3_ChatGPT-Image-Jun-6-2025-05_58_51-PM.avif 962w,
+                  https://nextpathvitality.com/wp-content/uploads/2025/12/c1b833b2-233a-11f0-a585-06d664cfaed9_f032f95db7fce567dd1ffec18937834dab05d1c3_ChatGPT-Image-Jun-6-2025-05_58_51-PM-768x512.avif 768w,
+                  https://nextpathvitality.com/wp-content/uploads/2025/12/c1b833b2-233a-11f0-a585-06d664cfaed9_f032f95db7fce567dd1ffec18937834dab05d1c3_ChatGPT-Image-Jun-6-2025-05_58_51-PM-300x200.avif 300w"
+          sizes="(max-width: 962px) 100vw, 962px"
+          width="962" height="641"
+          alt="Sam Elliott and Dr. O'Neill interview"
+          fetchpriority="high"
+          decoding="async">
+      </a>
+    </div>
+
+    <!-- Video notice -->
+    <div class="video-notice">
+      <h2>&#128266; Please wait up to 5 seconds for the video to load. Make sure your sound is turned on.</h2>
+    </div>
+
+    <!-- CTA button 1 -->
+    <div class="btn-wrap">
+      <a id="cta" class="cta-btn" href="https://breathwellpost.site/breathe-easy-again/">
+        <span class="button-text">Watch The Free Presentation Now</span>
+        <span class="subtext">Warning: This video may be taken down at any time</span>
+      </a>
+    </div>
+
+    <!-- Body copy -->
+    <p class="custom-paragraph">
+      If you have COPD, or just can&#8217;t seem to <b>clear the mucus from
+      your lungs</b> no matter what you try &#8212; inhalers, steam, breathing exercises &#8212;
+      or if you&#8217;ve been told your lungs will <em>never</em> get better&#8230;
+      this is the most important thing you&#8217;ll read today.
+    </p>
+
+    <p class="custom-paragraph">
+      You&#8217;re about to hear the story of <b>Sam Elliott</b> &#8212; a 74-year-old man who was
+      planning end-of-life care for his COPD when a Harvard lung doctor showed him something
+      no pulmonologist had ever told him. <b>Seventeen days later, he rode horses 12 miles
+      without stopping.</b> His oxygen levels were back to normal. His rescue inhaler sat
+      collecting dust.
+    </p>
+
+    <p class="custom-paragraph">
+      A Harvard-trained pulmonologist with 30 years at Johns Hopkins just revealed why
+      <b>standard treatments never fully clear your lungs.</b> The real problem isn&#8217;t the
+      mucus itself &#8212; it&#8217;s tiny valves deep inside your lungs that get jammed shut,
+      trapping toxins in a cycle she calls the <b>&#8220;Outlaw Mechanism.&#8221;</b>
+    </p>
+
+    <p class="custom-paragraph">
+      When those valves are blocked, <b>no inhaler, no breathing exercise, no steam treatment
+      can fully clear your airways.</b> The mucus keeps coming back. The chest stays tight.
+      The coughing never stops. And your lungs slowly lose more and more function &#8212;
+      not because they&#8217;re broken, but because <em>nobody ever fixed the root cause.</em>
+    </p>
+
+    <p class="custom-paragraph">
+      In this short presentation, she reveals the exact <b>5-compound formula that reopens
+      those jammed valves and helps your body clear trapped mucus on its own</b> &#8212;
+      and the name of the natural solution Big Pharma has been desperately trying to bury
+      before more people find out it works.
+    </p>
+
+    <p class="custom-paragraph" style="color:#850505;">
+      <b>&#9888;&#65039; A major pharmaceutical company has already sent a cease &amp; desist letter.
+      We don&#8217;t know how long this presentation will stay up.</b>
+    </p>
+
+    <!-- CTA button 2 -->
+    <div class="btn-wrap second">
+      <a id="cta" class="cta-btn" href="https://breathwellpost.site/breathe-easy-again/">
+        <span class="button-text">Watch The Free Presentation Now</span>
+        <span class="subtext">Warning: This video may be taken down at any time</span>
+      </a>
+    </div>
+
+  </div><!-- /content-section -->
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer-wrap">
+    <div class="footer-disclaimer">
+      <p style="color:#494949;">Copyright 2026 by Next Path Vitality<br>All rights reserved.</p>
+      <p>Please note that the information we provide is not intended to replace consultation with a
+      qualified medical professional. We encourage you to inform your physician of changes you make
+      to your lifestyle and discuss these with him or her. For questions or concerns about any
+      medical conditions you may have, please contact your doctor.</p>
+      <p>You should do your own research and confirm the information with other sources when
+      searching for information regarding health issues and always review the information carefully
+      with your professional health care provider before using any of the protocols presented on
+      this website and/or in the product sold here.</p>
+      <p>Results show may not be typical. Testimonials found on this page are results that have been
+      forwarded to us by users who have used the method mentioned, and may not reflect the typical
+      experience, may not apply to the average person and are not intended to represent or guarantee
+      that anyone will achieve the same or similar results.</p>
+      <p>The content on this site is for information purposes only. It is not intended to replace
+      professional medical advice, diagnosis or treatment.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://nextpathvitality.com/privacy-policy/">Privacy Policy</a>
+      <a href="https://nextpathvitality.com/terms-of-service/">Terms of Service</a>
+      <a href="https://nextpathvitality.com/disclosure-agreement/">Disclosure Agreement</a>
+      <a href="https://nextpathvitality.com/disclaimer/">Disclaimer</a>
+      <a href="https://nextpathvitality.com/about-us/">About Us</a>
+      <a href="https://nextpathvitality.com/contact/">Contact</a>
+    </div>
+  </footer>
+
+  <!-- ══ TRACKING ══ -->
+<script>
+window._atmc = {
+  cid: "yf1KPW7YdvXKbflyU61b",
+  event: "view",
+   plataform: "buygoods",
+   param_aff_clickid: "subid",
+   param_traffic_clickid: "subid2",
+   eid: "cta:cta"
+};
+</script>
+<script src='https://clkgen.nyc3.cdn.digitaloceanspaces.com/atmc-v2-min.js'></script>
+
+  <!-- Ticker duplication script -->
+  <script>
+    (function() {
+      var loop = document.getElementById('tickerLoop');
+      var content = document.getElementById('tickerContent');
+
+      // Duplicate content until it fills the viewport width
+      var counter = 0;
+      while (content.offsetWidth < window.innerWidth && counter < 100) {
+        content.innerHTML += ' Daily updates on wellness and health - ';
+        counter++;
+      }
+
+      // Double the loop so the seamless scroll works
+      loop.innerHTML = loop.innerHTML + loop.innerHTML;
+    })();
+  </script>
+
+</body>
+</html>
